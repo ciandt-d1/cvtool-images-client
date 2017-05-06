@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Kingpick Image API
+    CvTool Image API
 
-    Image  services.
+    Image services.
 
     OpenAPI spec version: v1
     
@@ -28,14 +28,14 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Kingpick Image API",
+    description="CvTool Image API",
     author_email="",
     url="",
-    keywords=["Swagger", "Kingpick Image API"],
+    keywords=["Swagger", "CvTool Image API"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Image  services.
+    Image services.
     """
 )

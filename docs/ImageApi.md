@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 
-Adds an image signature to the database.
+Adds an image to the database.
 
 ### Example 
 ```python

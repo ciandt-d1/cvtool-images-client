@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Kingpick Image API
+    CvTool Image API
 
-    Image  services.
+    Image services.
 
     OpenAPI spec version: v1
     

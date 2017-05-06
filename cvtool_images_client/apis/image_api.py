@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Kingpick Image API
+    CvTool Image API
 
-    Image  services.
+    Image services.
 
     OpenAPI spec version: v1
     
@@ -42,7 +42,7 @@ class ImageApi(object):
 
     def add(self, tenant_id, project_id, image_request, **kwargs):
         """
-        Adds an image signature to the database.
+        Adds an image to the database.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,7 +69,7 @@ class ImageApi(object):
 
     def add_with_http_info(self, tenant_id, project_id, image_request, **kwargs):
         """
-        Adds an image signature to the database.
+        Adds an image to the database.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -113,6 +113,12 @@ class ImageApi(object):
         if ('image_request' not in params) or (params['image_request'] is None):
             raise ValueError("Missing the required parameter `image_request` when calling `add`")
 
+        if 'tenant_id' in params and len(params['tenant_id']) > 64:
+            raise ValueError("Invalid value for parameter `tenant_id` when calling `add`, length must be less than or equal to `64`")
+        if 'tenant_id' in params and len(params['tenant_id']) < 3:
+            raise ValueError("Invalid value for parameter `tenant_id` when calling `add`, length must be greater than or equal to `3`")
+        if 'tenant_id' in params and not re.search('[a-z0-9-_\\.]{3,64}', params['tenant_id']):
+            raise ValueError("Invalid value for parameter `tenant_id` when calling `add`, must conform to the pattern `/[a-z0-9-_\\.]{3,64}/`")
 
         collection_formats = {}
 

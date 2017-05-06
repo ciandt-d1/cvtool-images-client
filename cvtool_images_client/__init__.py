@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Kingpick Image API
+    CvTool Image API
 
-    Image  services.
+    Image services.
 
     OpenAPI spec version: v1
     
@@ -14,7 +14,8 @@
 from __future__ import absolute_import
 
 # import models into sdk package
-from .models.annotation import Annotation
+from .models.annotations import Annotations
+from .models.error import Error
 from .models.image_request import ImageRequest
 from .models.image_response import ImageResponse
 
